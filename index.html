@@ -1,57 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
+        <meta charset = "utf-8">
+		<title>Will Nguyen</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 
 <body>
-	<div id="songsList"> 
-		<button type="button" id="btn">Load Songs by Pop Songs or Other Songs</button>
-	</div>
+    <header id = "main_header">
+        //<img src="profile.jpg" alt="Will Nguyen" width="180" height="180">
+        <h1>Will Nguyen</h1>
+        <h2>Master of Information Management Student</h2>
+        <h3>University of Maryland, College Park</h3>
+    </header> 
 
-	<script>
-		$('#btn').click(function () {
-		    var songRequest = new XMLHttpRequest();
-		    // complete the AJAX call using the url provided in the assignment
-			songRequest.onload = function() {
-            //Get the response from the AJAX request and assign it to the responseObject
-				//renderHTML(songData.songs);	
-				var songData = JSON.parse(songRequest.response);
-				renderHTML(songData.songs);
-			};
-			songRequest.open("GET", "https://mahitha13.github.io/JSON_Data/songs.json");
-		 	songRequest.send();
-		});
-		
-		function renderHTML(data){
-			console.log(data);
-			
-			var popSongs = "<h2> Today's Trending Pop Songs </h2>";
-			var otherSongs = "<h2> Other Trending Songs </h2>";
-            var countPop = 1;
-            var count = 1;
+    <h1>Bio</h1>
+    <p>
+        I am a part time grad student pursuing a Master's in Information Management. 
+        I am a recent graduate from the University of Maryland. 
+        I have software engineering experience with Lockheed Martin and have conducted data science research with UMD's iSchool. 
+        I hope to pursue a career in data science or project management.
+    </p>
 
-
-			for(var i=0; i<data.length; i++){ 
-				var genre = data[i].code;
-				if(genre.search("pop")!= -1){
-					popSongs +=  countPop + '. <span>' + data[i].title + ' - ' + data[i].artist + '</span><br>'; 
-                    countPop++;
-				}
-				else{
-					otherSongs += count + '. <span>' + data[i].title + ' - ' + data[i].artist + '</span><br>'; 
-                    count++;
-				}
-			}			
-	
-			console.log(popSongs);
-			console.log(otherSongs);
-			var songsList = document.getElementById("songsList");			
-			songsList.insertAdjacentHTML('beforeend', popSongs);
-			songsList.insertAdjacentHTML('beforeend', otherSongs);
-			$('#btn').css('display', 'none');
-		}			
-	</script>
+    <h1>Technical Skills</h1>
+    <ul>
+        <li>Java</li>
+        <li>Digital Curation</li>
+        <li>Data Visualization</li>
 
 </body>
 </html>
