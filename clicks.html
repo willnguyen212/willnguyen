@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>List of 6 Items</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('ul.bvb li:even').addClass('even');
+				$('ul.bvb li:odd').addClass('odd');
+			})
+		</script>
+
+		<style>
+			.even{color:black;}
+			.odd{color:black;}
+
+			.first {
+				color:red;
+			}
+			.second {
+				color: blue;
+			}
+		</style>
+	</head>
+
+
+
+	<body>
+		<ul class="bvb">
+			<li>Marco Reus</li>
+			<li>Jude Bellingham</li>
+			<li>Erling Haaland</li>
+			<li>Raphael Guerreiro</li>
+			<li>Gio Reyna</li>
+			<li>Gregor Kobel</li>
+		</ul>
+	</body>
+
+	<script src="ps3.js"></script>	
+</html>
