@@ -1,0 +1,32 @@
+body {
+  margin: auto;
+  background-color: LightGray;
+}
+#main_header {
+  background-color: lightsteelblue;
+  height: 200px;
+  border-style: double;
+  border-width: thick;
+  border-color: Navy;
+}
+h1 {
+  color: Navy;
+  margin: 12px;
+}
+h2 {
+  margin: 24px;
+}
+h3 { 
+  margin: 24px;
+}
+p {
+  margin: 24px;
+  border-radius: 7px;
+  color: Black;
+}
+p.ridge {border-style: ridge;}
+img {
+  margin-right: 10px;
+  margin-top: 10px;
+  float: right;
+}
